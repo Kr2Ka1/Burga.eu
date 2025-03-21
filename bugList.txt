@@ -1,0 +1,14 @@
+1. iš Help center paspaudus logo nenukreipia į home page.
+2. Akinių skiltį atsidarius, nėra navigacijos meniu juostos (header'yje).
+
+
+
+
+
+
+
+
+
+
+
+
