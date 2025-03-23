@@ -7,7 +7,7 @@ describe('1. Home Page', () => {
     cy.wait(10000);
     cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
   });
-
+ 
   it('1.1 Verify the home page loads successfully', () => {
     cy.get('.gbl-has-b2b--').should('be.visible');
     cy.get('.flex.col-wrap.align-bottom.justify-center.grid.grid--f').should('be.visible');
