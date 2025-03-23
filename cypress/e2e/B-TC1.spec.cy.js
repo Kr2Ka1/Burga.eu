@@ -34,7 +34,7 @@ describe('1. Home Page', () => {
     cy.wait(5000);
     cy.get('.f-w600.d-block.cell-l.cell-r.t-ucase').should('be.visible').and('contain', 'Suggestions');
     cy.get('.f-w600.d-block.cell-l.cell-r.row.t-ucase').should('be.visible').and('contain', 'Products');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();//šiuo metu puslayje jo nebėra
     cy.get('a.d-block.btn.btn--bdr').should('be.visible').and('contain', 'VIEW ALL  RESULTS');
     cy.get('.js-sidebar-search__clear.btn.btn--xs.sidebar-search-clear').should('be.visible').click();
     cy.get('input[placeholder="Type to search"]').should('be.visible');

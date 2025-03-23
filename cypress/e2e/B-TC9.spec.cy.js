@@ -3,12 +3,13 @@ describe('9. Footer Links', () => {
     cy.visit('https://eu.burga.com/');
     cy.viewport(1640, 950);
     cy.wait(10000);
-     cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
+    cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
+    cy.get('#onetrust-accept-btn-handler').click();
   });
 
   it('9.1 Navigate to and verify that "About Us" page and information is visible', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.get('[href="/pages/about-us"]').should('be.visible').and('contain', 'About Us').click();
     cy.get('.h-style').should('be.visible').and('contain', 'About Us');
     cy.get('.block-c > .rte-content').should('be.visible').and('not.be.empty');
@@ -16,7 +17,7 @@ describe('9. Footer Links', () => {
 
   it('9.2 Navigate to and verify that "Blog" section page and information is visible', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.get('[href="https://burga.com/blogs/news"]').should('be.visible').and('contain', 'Blog');
     // cy.wait(500);
     // cy.origin('https://burga.com', () => {
@@ -28,7 +29,7 @@ describe('9. Footer Links', () => {
 
   it('9.3 Navigate to and verify that "Partnerships and Collaborations" section page and information is visible', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.wait(1000);
     cy.get('[href="/pages/partnerships-collaborations"]').should('be.visible').and('contain', 'Partnerships and Collaborations').click();
     cy.get('.r-1c743lo > span > h3 > strong').should('be.visible').and('contain', 'Join our Partnerships Family');
@@ -42,7 +43,7 @@ describe('9. Footer Links', () => {
 
   it.only('9.4 Check if the redirect to Instagram works', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.wait(1000);
     cy.get('[href="https://www.instagram.com/burgaofficial/"]').should('be.visible').and('contain', 'Instagram');
   //   cy.wait(500);
@@ -54,7 +55,7 @@ describe('9. Footer Links', () => {
 
   it('9.5 Check if the redirect to Facebook works', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.wait(1000);
     cy.get('[href="https://www.facebook.com/BurgaOfficial/"]').should('be.visible').and('contain', 'Facebook').click();
     cy.wait(500);
@@ -63,7 +64,7 @@ describe('9. Footer Links', () => {
 
   it('9.6 Check if the redirect to TikTok works', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.wait(1000);
     cy.get('[href="https://www.tiktok.com/@burgaofficial"]').should('be.visible').and('contain', 'TikTok').click();
     cy.wait(500);
@@ -72,7 +73,7 @@ describe('9. Footer Links', () => {
 
   it('9.7 Check if the redirect to YouTube works', () => {
     cy.scrollTo('bottom');
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
     cy.wait(1000);
     cy.get('[href="https://www.youtube.com/@burgaofficial"]').should('be.visible').and('contain', 'YouTube').click();
     cy.wait(500);
