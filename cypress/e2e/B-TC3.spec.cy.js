@@ -4,7 +4,7 @@ describe('3. Product Details Page', () => {
     cy.viewport(1640, 950);
     cy.wait(10000);
     cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
-    // cy.get('#onetrust-accept-btn-handler').click();
+    cy.get('#onetrust-accept-btn-handler').click();
   });
 
   it('3.1 Ensure product images are displayed', () => {
