@@ -4,7 +4,7 @@ describe('9. Footer Links', () => {
     cy.viewport(1640, 950);
     cy.wait(10000);
     cy.get('.needsclick.klaviyo-close-form.go4255485812.kl-private-reset-css-Xuajs1').click();
-    cy.get('#onetrust-accept-btn-handler').click();
+    // cy.get('#onetrust-accept-btn-handler').click();
   });
 
   it('9.1 Navigate to and verify that "About Us" page and information is visible', () => {
