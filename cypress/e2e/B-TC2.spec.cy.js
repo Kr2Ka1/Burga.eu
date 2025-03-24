@@ -75,7 +75,7 @@ describe('2. Product Categories', () => {
       cy.get('[data-value="Hearts"]').should('be.visible').and('contain', 'Hearts').as('hearts');
       cy.get('@hearts').click();
       // cy.get('.flex.row-wrap.align-center.justify-left.flex-grid--s.cell-l--s.cell-r--s').should('be.visible').and('contain', 'Hearts');//kažkodėl neina pasirinkti patikrinimui ar išsifiltravo širdutės.
-      // cy.get('#onetrust-accept-btn-handler').should('be.visible').click();//šiuo metu puslapyje nebesimato
+      cy.get('#onetrust-accept-btn-handler').should('be.visible').click();//šiuo metu puslapyje nebesimato
       cy.get('.js-filter-nav__toggle.js-filter-nav__update.btn.btn--green').should('be.visible').and('contain', 'APPLY FILTER').click();
       cy.get('.wbsk-ui-option-toggle__option.is-selected').should('be.visible')
       // cy.get('.wbsk-ui-option-toggle__option-content').should('be.visible').invoke('text').should('contain', 'Alphabetically, A-Z').click();

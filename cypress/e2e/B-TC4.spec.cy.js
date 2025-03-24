@@ -22,7 +22,7 @@ describe('4. Search Functionality', () => {
     cy.get('.js-sidebar-search__input.reset-input.sidebar-search__input.sidebar-search__input--icon-left').type('drinkware');
     cy.get('.f-w600.d-block.cell-l.cell-r.row.t-ucase').should('be.visible').and('contain', 'Products');
     cy.get('#shopify-section-predictive-search-sidebar').should('be.visible').and('not.be.empty');
-    // cy.get('#onetrust-accept-btn-handler').click();
+    cy.get('#onetrust-accept-btn-handler').click();
     cy.get('a.d-block.btn.btn--bdr').should('be.visible').and('contain', 'VIEW ALL  RESULTS').click();
     cy.get('.js-ajax-search-results').should('be.visible').and('contain','Travel Mug');
  

@@ -76,7 +76,7 @@ describe('7. User Account', () => {
     cy.get('#customer_login > .block-r > .btn').should('be.visible').and('contain', 'LOG IN').click();
     cy.get('input:invalid').should('have.length', 3)
     cy.get('#CustomerEmail').then(($input) => {
-      expect($input[0].validationMessage).to.eq('Please fill in this field.')
+      expect($input[0].validationMessage).to.eq('Please fill out this field.')
     })
   });
 

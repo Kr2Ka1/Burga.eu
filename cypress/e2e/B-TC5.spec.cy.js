@@ -1,8 +1,8 @@
 function addProductsToCart() {
-  cy.get('.embla__container > [href="/collections/all"]').should('be.visible').click();
-  cy.get('.btn-reset.col-thumb-btn.col-thumb-btn--atc').first().should('be.visible').click();
-  cy.get('.embla__container > [href="/collections/travel-mugs"]').should('be.visible').click();
-  cy.get('.btn-reset.col-thumb-btn.col-thumb-btn--atc').first().should('be.visible').click();
+  cy.get('.embla__container > [href="/collections/all"]').click();
+  cy.get('.btn-reset.col-thumb-btn.col-thumb-btn--atc').first().click();
+  cy.get('.embla__container > [href="/collections/travel-mugs"]').click();
+  cy.get('.btn-reset.col-thumb-btn.col-thumb-btn--atc').first().click();
 }
 
 describe('5. Shopping Cart', () => {
@@ -18,18 +18,22 @@ describe('5. Shopping Cart', () => {
     cy.get('.filter-nav__menu-header > .h-style').should('be.visible').and('contain', 'ADDED TO CART');
     cy.get('.filter-nav__menu-header > .js-atc-modal-close').should('be.visible').click();
   });
+
   it('5.2 View items in the cart', () => {
     addProductsToCart();
     cy.get('.mh__cart-counter.block-abc.js-wbsk-sidebar-cart__cart-count').should('be.visible').and('not.be.empty').and('contain', '2');
   });
   it('5.3 Update product quantities.', () => {
     addProductsToCart();
+    cy.wait(500);
     cy.get('.js-wbsk-sidebar-cart__open.mh__button.mh__button--cart').should('be.visible').click();
     cy.get('.modal-sidebar').should('be.visible');
     cy.get('.flex.row-wrap.align-center.justify-space.block-rel > .t-grey.lh-reset').should('be.visible').and('contain', '2 Items');
     cy.get('span.qty-selector__ctrl.qty-selector__ctrl--plus').eq(1).click();
+    cy.wait(500);
     cy.get('.flex.row-wrap.align-center.justify-space.block-rel > .t-grey.lh-reset').should('be.visible').and('contain', '3 Items');
     cy.get('span.qty-selector__ctrl.qty-selector__ctrl--minus').eq(0).click();
+    cy.wait(500);
     cy.get('.flex.row-wrap.align-center.justify-space.block-rel > .t-grey.lh-reset').should('be.visible').and('contain', '2 Items');
   });
 

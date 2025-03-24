@@ -1,5 +1,8 @@
 1. iš Help center paspaudus logo nenukreipia į home page.
 2. Akinių skiltį atsidarius, nėra navigacijos meniu juostos (header'yje).
+3. Leido susikurti paskyrą au testiniais duomenimis ir netikru paštu.
+4. Prisiregistravus ar prisijugus prie savitarnos visiškai nėra jokio identifikavimo kas prisijungė ir ar prisijungė(tik nuėjus į account skiltį galima spręsti kad esi prisijungęs)
+
 
 
 
